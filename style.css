@@ -1,7 +1,7 @@
 body {
     font-family: "Oswald", sans-serif;
     margin: 0;
-    height: 100vh;
+    height: 100vh; /*преобладающий текст в бади*/
 }
 
 a { 
@@ -11,33 +11,29 @@ a {
 
 .header {
 		display: flex;
-    height: 110px;
 		justify-content: space-between;
     background-color: #FFFFFF;
     color: black;
 		align-items:center;
-		padding: 20px 80px;
+		padding: 30px 80px;
 		white-space: nowrap;
 }
 
 .logo {
     font-size: 36px;
     font-weight: 500;
-		padding: 29px 0px 0px 80px;
 }
 
 .navigation{
+	display: flex;
 		font-size: 24px;
 		font-weight: 300;
-		padding: 37px 80px;
+		gap: 50px
+
 }
 
 .navigation a {
 	margin-right: 46px;
-}
-
-.navigation a:last-child {
-	margin-right: 0;
 }
 
 .coffee_picture {
@@ -48,7 +44,7 @@ a {
 	background-repeat: no-repeat; 
 	display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center; /*располагает по неосновной оси, justify content - по основной*/
 	justify-content: center;
 	
 }
@@ -60,12 +56,16 @@ a {
 }
 
 .line_picture {
-	min-width: 80px;
+	height: 10px;
+	width: 80px;
+	background-color: #817070;
+	margin: 0 auto;
 }
 
 .story {
-	height: 632px;
+	/*height: 632px;*/
 	background-color: #FFFFFF;
+	padding: 50px 80px
 }
 
 .second_header {
@@ -74,29 +74,32 @@ a {
 	padding-top: 60px;
 	margin: 0;
 	text-align: center;
+	margin-bottom: 60px;
 }
 
 .content{
 	display: flex;
-	justify-content: space-between;
+	align-items: center; /**/
+	gap: 40px;
+
 	
 }
 
 .picture {
 	height: 100%;
-	padding-left: 80px;
-	margin-top: 60px;
+	
 }
 
 .first_text{
 	font-size: 20px;
 	font-weight: 300;
-	padding: 170px 123px;
+	margin: 0;
+
 }
 
 .blog {
-	height: 711px;
 	background-color: #EFEFEF;
+	padding-bottom: 60px;
 }
 
 .blocks{
@@ -108,7 +111,6 @@ a {
 .card {
 	width: 365px;
 	background-color: #FFFFFF;
-	margin-top: 59px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -152,30 +154,43 @@ a {
 	margin-bottom: 28px;
 }
 
-.email{
+.email_input{
 	font-size: 20px;
 	font-weight: 300;
 	border: 3px solid #FFFFFF ;
 	box-sizing: border-box;
 	text-align: center;
 	max-width: 300px;
-	padding: 9px 90px;
+	padding: 9px;
   display: block;
 	margin: 0 auto;
 	margin-bottom: 25px;
 	white-space: nowrap;
+	background-color: #817070;
+	color: #FFFFFF;
 }
 
-.submit{
+.email_input::placeholder{
+	color: #FFFFFF;
+}
+
+.submit_button{
 	font-size: 20px;
 	font-weight: 500;
 	color: #817070;
 	width: 129px;
 	background-color: #FFFFFF;
 	margin: 0 auto;
+	border: none;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.end{
+.submit_button:hover{
+	background-color:#817070;
+	color: #FFFFFF;
+}
+
+.footer{
 	height: 72px;
 	background-color: #FFFFFF;
 }
@@ -184,6 +199,6 @@ a {
 	font-size: 20px;
 	font-weight: 300;
 	text-align: center;
-	margin: 0 auto;
+	margin: 0; /*когда пишем auto, значит, что для вертикали 0, для горизонтали auto*/
 	padding-top: 28px;
 }
